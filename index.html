@@ -1,47 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  </head>
-  <body>
-    <h1>Now let's begin interactive websites with JavaScript!!!</h1>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="modal-parent">
+        <div class="modal">
+            <p>This is our modal</p>
+            <button id="closeModal">Close modal</button>
+        </div>
+    </div>
+    <div class="keep-scrolling">
+        <p>Keep scrolling......</p>
+        <button id="showModal">Show modal</button>
+    </div>
+    <div class="outer-wrapper">
+        <div class="middle-wrapper">
+            <div class="inner-wrapper">
+                <div class="come-out red"></div>
+                <div class="come-out blue"></div>
+                <div class="come-out green"></div>
+            </div>
+        </div>
+    </div>
+    <div class="keep-scrolling">
+        Keep scrolling......
+    </div>
 
-    <h2>What Can JavaScript Do?</h2>
-
-    <!-- 1.JavaScript can change HTML content.  -->
-
-    <p id="demo">JavaScript can change HTML content.</p>
-
-    <button
-      type="button"
-      onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript!'"
-    >
-      Click Me!
-    </button>
 
 
-    <h2>What Can JavaScript Do?</h2>
 
-    <!-- 2.JavaScript can change HTML attribute values.  -->
 
-<p>JavaScript can change HTML attribute values.</p>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
 
-<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+    <div class="blink">This is a goal!!!</div>
 
-<button onclick="document.getElementById('myImage').src='js.img.gif'">Turn on the light</button>
-
-<img id="myImage" src="js.img.gif" style="width:100px">
-
-<button onclick="document.getElementById('myImage').src='js.img.gif'">Turn off the light</button>
-
-<h2>What Can JavaScript Do?</h2>
-
-<!-- 3.JavaScript can change the style of an HTML element. -->
-
-<p id="merge">JavaScript can change the style of an HTML element.</p>
-<button type="button" onclick="document.getElementById('merge').style.fontSize='40px'">Click Me!</button>
-
-  </body>
+    <script src="./index.js"></script>
+</body>
 </html>
