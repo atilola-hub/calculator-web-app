@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    transform: translateX(-50%);
+    transition: all .5s ease-in-out; 
+}
+
+.box.show{
+    transform: translateX(0);
+}
+
+.blink{
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 50vh;
+    background-color: brown;
+    color: #fff;
+    font-size: 5rem;
+}
+@keyframes ok {
+    0%{
+        color: #fff;
+        background-color: brown;
+    }
+    100%{
+
+        color: red;
+        background-color: blue;
+    }
+}
+.alert{
+    animation: ok 3s ease-in-out 3; 
+}
+
+.keep-scrolling{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background-color: grey;
+    color: pink;
+    font-size: 4rem;
+    align-content: center;
+}
+.keep-scrolling:nth-child(2){
+    background-color: blue;
+    color: white;
+}
+
+.outer-wrapper{
+    height: 300vh;
+    width: 100vw;
+    background-color: grey;
+    view-timeline-name: --section-scroll;
+    
+}
+
+.middle-wrapper{
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+}
+
+@keyframes goFar {
+    to {
+        transform: translateX(-200vw); 
+    }
+}
+
+
+.inner-wrapper{
+    display: flex;
+    width: 300vw;
+    height: 100vh;
+    animation-name: goFar;
+    animation-timing-function: linear;
+    animation-timeline: --section-scroll;
+    animation-range:  contain 0%;
+}
+
+.come-out{
+    width: 100vw;
+    height: 100vh;
+}
+.red{
+    background-color: purple;
+}
+.green{
+    background-color: green;
+}
+.blue{
+    background-color: blue;
+}
+.modal-parent{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.modal{
+    width: 50vw;
+    height: 50vh;
+    background-color: aquamarine;
+    border-radius: 10px;
+    position: absolute;
+    display: grid;
+    font-size: 5rem;
+    place-items: center;
+}
