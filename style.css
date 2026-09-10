@@ -1,77 +1,43 @@
-body{
-    margin:0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    background:#ececec;
-}
-
-#keys{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-    padding:20px;
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(0, 0%, 95%);
 }
 
 #calculator {
-    width: 300px;
-    background: #1f1f1f;
-    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 15px;
+    max-width: 500px;
     overflow: hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,.35);
 }
-button {
-    height: 75px;
-    border: none;
-    border-radius: 50%;
-    background: #444; 
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all .2s ease;
-    
-    
-}
+
 #display {
     width: 100%;
-    padding: 25px;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 4rem;
+    text-align: right;
     border: none;
     outline: none;
-    background: white;
+    background-color: hsl(0, 0%, 20%);
     color: white;
-    font-size: 3rem;
-    text-align: right;
-    box-sizing: border-box;
-}
-/* #display{
-    width:100%;
-    padding:25px;
-    border:none;
-    outline:none;
-    background: white;
-    color:white;
-    font-size:3rem;
-    text-align:right;
-    box-sizing:border-box;
 }
 
-button:hover{
-    background: #5d5d5d;
-} */
-
-
-/* #keys {
+#keys {
     display: grid;
-    grid-template-columns: (4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     padding: 25px;
 }
+
 button {
     width: 100px;
-    height: 12px;
-    border-radius: 50px;
+    height: 100px;
+    border-radius: 50%;
     border: none;
     background-color: hsl(0, 0%, 30%);
     color: white;
@@ -79,10 +45,23 @@ button {
     font-weight: bold;
     cursor: pointer;
 }
-button:hover{
+
+button:hover {
     background-color: hsl(0, 0%, 40%);
 }
+
 button:active {
     background-color: hsl(0, 0%, 50%);
-    
-} */  
+}
+
+.operator-btn {
+    background-color: hsl(35, 100%, 55%);
+}
+
+.operator-btn:hover {
+    background-color: hsl(35, 100%, 65%);
+}
+
+.operator-btn:active {
+    background-color: hsl(35, 100%, 75%);
+}
